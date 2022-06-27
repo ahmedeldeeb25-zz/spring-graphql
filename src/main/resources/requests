@@ -1,0 +1,38 @@
+// add new customer
+
+mutation{
+    addCustomer(name:"cName"){
+        id
+        name
+    }
+}
+
+// Get all customers
+
+{
+    customers{
+        id
+        name
+    }
+}
+
+// Get customers by name
+
+{
+    customerByName(name:"Miro"){
+        id
+        name
+    }
+}
+
+// Get customer by name using variable
+query ($name: String){
+    customerByName(name:$name){
+        id
+        name
+    }
+}
+  ... defining ii like
+     {
+        "name":"Ahmed"
+     }
